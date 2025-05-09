@@ -1,0 +1,152 @@
+<context>
+# Overview  
+DeepFlow is a deep work tracking and focus management website with a cyberpunk aesthetic. It helps users track their deep work sessions, visualize their progress with a stylized contribution heatmap, and manage their focus states with immersive cyberpunk-themed UI elements. DeepFlow is designed for knowledge workers, programmers, writers, and anyone who wants to track and improve their deep work habits while enjoying a visually engaging experience.
+
+# Core Features  
+1. **Cyberpunk Heatmap Visualization**
+   - Interactive contribution-style heatmap tracking deep work sessions
+   - Custom cyberpunk-themed activity levels (Ghost Mode, Data Drifter, Synthwave Flow, etc.)
+   - Color-coded intensity based on focus duration/productivity
+   - Animated hover effects with session details
+
+2. **Focus Session Timer**
+   - Customizable Pomodoro-style timer with cyberpunk theming
+   - Multiple focus intensity presets (e.g., "Neural Sync", "Deep Dive", "Overclock")
+   - Visual and audio cues for session start/end/breaks
+   - Session logging and categorization
+
+3. **Digital Dashboard**
+   - Summary statistics of focus sessions and productivity
+   - Streak tracking and personal records
+   - Customizable cyberpunk interface with glowing elements
+   - Dark mode by default with neon accent colors
+
+4. **User Experience**
+   - No login required - data stored in local storage
+   - Offline functionality
+   - Responsive design for all devices
+   - Keyboard shortcuts for power users
+
+# User Experience  
+## Primary User: Deep Work Practitioners
+- Knowledge workers wanting to track focus sessions
+- Programmers, writers, designers, and students
+- Users who appreciate cyberpunk aesthetics and gamification
+
+## Key User Flows
+1. Start a new focus session with timer
+2. Review daily/weekly/monthly contribution heatmap
+3. Analyze personal productivity trends
+4. Customize workspace and session settings
+
+## UI/UX Considerations
+- Dark background with neon blue/purple/teal accents
+- Glowing elements and subtle animations
+- Circuit board patterns and cyberpunk visual motifs
+- Clean, minimalist layout with immersive details
+</context>
+<PRD>
+# Technical Architecture  
+## Frontend
+- Next.js framework for static site generation and frontend
+- React for component-based UI development
+- CSS modules or Tailwind CSS for styling
+- Local storage for saving user data without backend
+- Responsive design using CSS Grid and Flexbox
+- Animation libraries (Framer Motion) for cyberpunk effects
+
+## Components
+- HeatmapGrid: Main visualization component
+- FocusTimer: Session management component
+- StatsPanel: User metrics and analytics
+- SettingsModal: User preferences
+- CyberpunkUI: Theme components (buttons, cards, etc.)
+
+## Data Model
+- Session: {id, date, duration, category, intensity, notes}
+- Settings: {theme, timerDefaults, soundEnabled, notifications}
+- Stats: {dailyTotals, streaks, records}
+
+## No Backend Requirements
+- All data stored in browser's localStorage
+- No authentication or user management needed
+- No external API dependencies required
+
+# Development Roadmap  
+## MVP Phase
+1. Basic page structure and cyberpunk styling
+2. Contribution heatmap with mock data
+3. Simple focus timer functionality
+4. Local storage integration
+5. Essential UI components with cyberpunk styling
+
+## Enhancement Phase
+1. Advanced timer features (custom intervals, different modes)
+2. Enhanced heatmap interactions and animations
+3. Stats dashboard with basic analytics
+4. Settings and customization options
+5. Keyboard shortcuts and productivity enhancements
+
+## Polish Phase
+1. Advanced animations and visual effects
+2. Sound effects and optional background audio
+3. Additional cyberpunk theming options
+4. Performance optimizations
+5. Progressive Web App capabilities
+
+# Logical Dependency Chain
+1. Core UI Framework and Layout (foundation)
+   - Setup Next.js project
+   - Implement basic page structure
+   - Create cyberpunk theme system
+
+2. Heatmap Visualization (core feature)
+   - Implement basic grid structure
+   - Add mock data visualization
+   - Style with cyberpunk elements
+   - Add interactive features
+
+3. Timer Functionality (user interaction)
+   - Build basic timer component
+   - Implement session tracking
+   - Connect to local storage
+   - Add cyberpunk styling
+
+4. Dashboard and Stats (derived feature)
+   - Create stats calculations from session data
+   - Build visualization components
+   - Implement cyberpunk-themed charts and metrics
+
+5. Settings and Customization (enhancement)
+   - Create settings interface
+   - Implement theme customization
+   - Add user preferences
+
+# Risks and Mitigations  
+## Technical Challenges
+- Creating responsive heatmap visualization
+  - Mitigation: Use SVG or Canvas for flexible rendering
+  
+- Handling complex animations without performance issues
+  - Mitigation: Use efficient animation libraries, throttle effects
+
+- Local storage limitations
+  - Mitigation: Implement data pruning and export/import features
+
+## Scope Management
+- Focus on core features for MVP
+- Clearly define cyberpunk styling requirements
+- Prioritize functionality over excessive visual effects
+
+# Appendix  
+## Cyberpunk Theme Elements
+- Neon colors: Electric blue (#0ff), vibrant purple (#f0f), cyber green (#0f0)
+- Dark backgrounds: Deep navy (#051b30), near black (#0a0b10)
+- UI Patterns: Circuit traces, digital glitches, terminal-style text
+- Typography: Monospace for data, futuristic san-serif for headers
+
+## Reference Implementation
+- Heatmap inspiration: GitHub contribution calendar
+- Timer inspiration: Pomodoro technique with 25/5 minute intervals
+- Visual inspiration: Cyberpunk 2077, Blade Runner, The Matrix
+</PRD> 

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 11, 16;
+  --background-end-rgb: 5, 27, 48;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    )
+    fixed;
+  font-family: 'Share Tech Mono', monospace;
+  min-height: 100vh;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cyber-header;
+  }
+}
+
+@layer components {
+  .cyber-container {
+    @apply border border-cyber-blue-500 bg-cyber-black/80 p-4 relative;
+    box-shadow: inset 0 0 10px rgba(0, 204, 255, 0.5);
+  }
+  
+  .cyber-container::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full pointer-events-none;
+    background: linear-gradient(45deg, rgba(0, 204, 255, 0.1), transparent 70%);
+  }
+  
+  .cyber-button {
+    @apply bg-cyber-black border border-cyber-blue-500 text-cyber-blue-500 px-4 py-2 font-cyber uppercase tracking-wider relative overflow-hidden transition-all duration-300;
+  }
+  
+  .cyber-button:hover {
+    @apply shadow-cyber-blue text-white;
+  }
+  
+  .cyber-button::before {
+    content: '';
+    @apply absolute top-0 left-0 w-0 h-full bg-cyber-blue-500/10 transition-all duration-300;
+  }
+  
+  .cyber-button:hover::before {
+    @apply w-full;
+  }
+  
+  .cyber-input {
+    @apply bg-cyber-black/50 border border-cyber-blue-500 text-white px-3 py-2 font-cyber focus:outline-none focus:shadow-cyber-blue;
+  }
+  
+  .cyber-card {
+    @apply bg-cyber-navy/70 border border-cyber-purple-500 p-4 relative overflow-hidden;
+  }
+  
+  .cyber-card::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyber-purple-500 to-transparent;
+  }
+  
+  .cyber-grid {
+    @apply grid grid-cols-7 gap-1 font-cyber;
+  }
+  
+  .cyber-grid-cell {
+    @apply w-4 h-4 rounded-sm cursor-pointer transition-all duration-200;
+  }
+  
+  .activity-level-0 {
+    @apply bg-cyber-navy/30 hover:bg-cyber-navy/50;
+  }
+  
+  .activity-level-1 {
+    @apply bg-cyber-blue-100 hover:bg-cyber-blue-300;
+  }
+  
+  .activity-level-2 {
+    @apply bg-cyber-blue-300 hover:bg-cyber-blue-500;
+  }
+  
+  .activity-level-3 {
+    @apply bg-cyber-blue-500 hover:bg-cyber-blue-700;
+  }
+  
+  .activity-level-4 {
+    @apply bg-cyber-blue-700 hover:bg-cyber-blue-900 shadow-sm shadow-cyber-blue-500;
+  }
+  
+  .activity-level-5 {
+    @apply bg-cyber-blue-900 hover:bg-cyber-blue-900 shadow-cyber-blue;
+  }
+} 
